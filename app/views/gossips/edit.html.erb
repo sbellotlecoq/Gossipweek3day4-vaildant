@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Zi Acceuil pour balancer ton potin</title>
+
+  </head>
+
+  <h1> éditer un gossip </h1>
+
+<%= form_for @gossip do |f| %>
+
+    <div class="form-group">
+    <label>Titre du gossip</label>
+    <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+    <label>Contenu du gossip</label>
+    <%= f.text_area :content, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+    <button type="submit">éditer un gossip </button>
+    </div>
+
+    <% end %>
+

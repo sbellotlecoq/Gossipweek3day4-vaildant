@@ -1,0 +1,11 @@
+<div class="m-2">
+  <h3>Qui parle de nous dans ces villes ? </h3>
+
+  <% @city.users.each do |user| %>
+    <p>Potins de <%=user.first_name%> <%=user.last_name%> :</p>
+  
+    <%user.gossips.each do |gossip| %>
+      <ul><li>Potin : <a href= "<%=gossips_path(gossip.id)%>"><%=gossip.title%></a></li></ul>     
+    <% end %>
+  <% end %>
+</div>
